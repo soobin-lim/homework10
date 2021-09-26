@@ -1,7 +1,7 @@
 //intern’s name, ID, email, and school
-const inquirer = require("inquirer");
+const inquirer = require("inquirer-promise");
 
-function questions_for_engineer() {
+function questions_for_intern() {
   inquirer.prompt
   ([
     {
@@ -24,4 +24,4 @@ function questions_for_engineer() {
   );
 };
 
-module.exports = { questions_for_engineer };
+module.exports = { questions_for_intern };
