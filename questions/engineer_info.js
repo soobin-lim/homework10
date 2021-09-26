@@ -2,14 +2,10 @@
 
 const inquirer = require("inquirer");
 const addAMember = require('../addAMember');
-
-const employee = require('../classes/Employee');
 const engineer = require('../classes/Engineer');
-const intern = require('../classes/Intern');
-const manager = require('../classes/Manager');
 
 async function questions_for_engineer() {
-  await inquirer.prompt
+  return await inquirer.prompt
   ([
     {
       name: 'name',
@@ -34,7 +30,7 @@ async function questions_for_engineer() {
   ]).then(
     (val) => {
       my_engineer = new engineer(val.name, val.id, val.email, val.gh_username);
-      console.log(my_engineer);
+      return my_engineer;
     }
   ).catch(e => console.log(e));
 };

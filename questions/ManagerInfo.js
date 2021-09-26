@@ -1,10 +1,8 @@
 const inquirer = require("inquirer");
-
-const intern = require('../classes/Intern');
 const manager = require('../classes/Manager');
 
 async function ManagerInfo() { //WHEN I enter the team manager’s name, employee ID, email address, and office number
-  await inquirer.prompt
+  return await inquirer.prompt
     ([
       {
         type: "input",
@@ -28,7 +26,7 @@ async function ManagerInfo() { //WHEN I enter the team manager’s name, employe
       },
     ]).then((val) => {
       let my_manager = new manager(val.name, val.id, val.email, val.office_number)
-      console.log(my_manager);
+      return my_manager;
     }
     );
 };
