@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 
-function whoAdd() { //WHEN I enter the team manager’s name, employee ID, email address, and office number
-  inquirer.prompt
+async function addTeamManagerInfo() { //WHEN I enter the team manager’s name, employee ID, email address, and office number
+  await inquirer.prompt
     ([
       {
         type: "input",
@@ -29,4 +29,4 @@ function whoAdd() { //WHEN I enter the team manager’s name, employee ID, email
     );
 };
 
-module.exports = { whoAdd };
+module.exports = { addTeamManagerInfo };

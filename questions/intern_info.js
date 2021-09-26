@@ -1,8 +1,9 @@
 //intern’s name, ID, email, and school
 const inquirer = require("inquirer-promise");
+const addAMember = require('../addAMember');
 
-function questions_for_intern() {
-  inquirer.prompt
+async function questions_for_intern() {
+  await inquirer.prompt
   ([
     {
       name: 'name',
@@ -20,7 +21,10 @@ function questions_for_intern() {
       type: 'input',
     },
   ]).then(
-    (val) => {return val}
+    (val) => {
+      console.log(val);
+      addAMember.addAMember();
+    }
   );
 };
 

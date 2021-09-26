@@ -1,5 +1,9 @@
-myinquirer = require('./addTeamManagerInfo');
-secondQuestion = require('./addAMember');
+addTeamManagerInfo = require('./addTeamManagerInfo');
+addAMember = require('./addAMember');
 
-//myinquirer.whoAdd();
-secondQuestion.addAMember();
+async function init() {
+  await addTeamManagerInfo.addTeamManagerInfo();
+  await addAMember.addAMember();
+}
+
+init();

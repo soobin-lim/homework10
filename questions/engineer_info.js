@@ -1,9 +1,10 @@
 //engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
 
 const inquirer = require("inquirer");
+const addAMember = require('../addAMember');
 
-function questions_for_engineer() {
-  inquirer.prompt
+async function questions_for_engineer() {
+  await inquirer.prompt
   ([
     {
       name: 'name',
@@ -21,8 +22,10 @@ function questions_for_engineer() {
       type: 'input',
     },
   ]).then(
-    (val) => {return val}
-  );
+    (val) => {
+      console.log(val);
+    }
+  ).catch(e => console.log(e));
 };
 
 module.exports = { questions_for_engineer };
