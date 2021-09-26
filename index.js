@@ -1,3 +1,5 @@
 myinquirer = require('./myInquirer');
+secondQuestion = require('./secondQuestion');
 
-myinquirer.whoAdd();
+//myinquirer.whoAdd();
+secondQuestion.addAMember();
