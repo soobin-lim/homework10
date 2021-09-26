@@ -1,9 +1,14 @@
 const inquirer = require("inquirer");
 
-([
-  {
-    type: "confirm",
-    name: "choice",
-    message: "Play Again?"
-  }
-])
+function whoAdd() {
+  inquirer.prompt
+    ([
+      {
+        type: "input",
+        name: "choice",
+        message: "Who do you want to add?"
+      }
+    ]).then(val => console.log(val.choice));
+};
+
+module.exports = {whoAdd};
