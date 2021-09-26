@@ -1,5 +1,4 @@
-//engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-
+//intern’s name, ID, email, and school
 const inquirer = require("inquirer");
 
 function questions_for_engineer() {
@@ -7,17 +6,17 @@ function questions_for_engineer() {
   ([
     {
       name: 'name',
-      message: `engineer's name`,
+      message: `intern's name`,
       type: 'input',
     },
     {
-      name: 'email',
-      message: `engineer's email`,
+      name: 'id',
+      message: `intern's id`,
       type: 'input',
     },
     {
-      name: 'gh_username',
-      message: `engineer's GitHub username`,
+      name: 'school',
+      message: `school`,
       type: 'input',
     },
   ]).then(
