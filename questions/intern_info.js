@@ -23,9 +23,8 @@ async function questions_for_intern() {
   ]).then(
     (val) => {
       console.log(val);
-      addAMember.addAMember();
     }
-  );
+  ).catch(e => console.log(e));
 };
 
 module.exports = { questions_for_intern };

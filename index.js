@@ -1,9 +1,15 @@
+const { PassThrough } = require('stream');
+
 addTeamManagerInfo = require('./addTeamManagerInfo');
 addAMember = require('./addAMember');
 
 async function init() {
-  await addTeamManagerInfo.addTeamManagerInfo();
-  await addAMember.addAMember();
+  await addTeamManagerInfo.addTeamManagerInfo();  // First Question about Team Manager
+  var result = await addAMember.addAMember();      // Second and continuing question to add member(s)
+  
+  while(result !== 'finish'){
+    result = await addAMember.addAMember();
+  }
 }
 
 init();

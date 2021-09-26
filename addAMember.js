@@ -4,7 +4,7 @@ const questions_for_intern = require('./questions/intern_info');
 
 // engineer or an intern or to finish building my team
 async function addAMember() {
-  await inquirer.prompt([
+  return await inquirer.prompt([
     {
       type: 'list',
       name: 'choice',
@@ -12,6 +12,10 @@ async function addAMember() {
       choices: ['engineer', 'intern', 'finish']
     }],
   ).then(async (val) => {
+    console.log(val.choice);
+    if (val.choice == 'finish'){
+      return 'finish';
+    };
     await callSecondFunction(val.choice);
   });
 }
@@ -22,7 +26,7 @@ async function callSecondFunction(choice) {
   } else if (choice == 'intern') {
     await questions_for_intern.questions_for_intern();
   } else if (choice == 'finish') {
-    console.log('finish');
+    console.log('finish was not recognized in line 16 error');
     return;
   } else {
     console.log('not in the list error');
