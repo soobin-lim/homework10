@@ -1,5 +1,5 @@
-myinquirer = require('./myInquirer');
-secondQuestion = require('./secondQuestion');
+myinquirer = require('./addTeamManagerInfo');
+secondQuestion = require('./addAMember');
 
 //myinquirer.whoAdd();
 secondQuestion.addAMember();

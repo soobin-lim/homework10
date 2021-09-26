@@ -23,7 +23,10 @@ function whoAdd() { //WHEN I enter the team manager’s name, employee ID, email
         name: "office_number",
         message: "office number"
       },
-    ]).then(val => console.log(val));
+    ]).then((val) => { 
+      console.log(val)
+     }
+    );
 };
 
-module.exports = {whoAdd};
+module.exports = { whoAdd };
