@@ -1,15 +1,16 @@
-ManagerInfo = require('./questions/ManagerInfo');
-addAMember = require('./addAMember');
-var manager_info;
+const ManagerInfo = require('./questions/ManagerInfo');
+const addAMember = require('./addAMember');
+const generate_html = require('./generatehtml/generate_html');
+
 var engineers_array = [];
 var interns_array = [];
 
 async function init() {
-  manager_info = await ManagerInfo.ManagerInfo();  // First Question about Team Manager
-  await add_Members(engineers_array, interns_array);  // Add Engineer or Intern
+  var manager_info = await ManagerInfo.ManagerInfo();  // First Question about Team Manager
+  await add_Members(manager_info, engineers_array, interns_array);  // Add Engineer or Intern
 }
 
-async function add_Members(engineers_array, interns_array) {
+async function add_Members(manager_info, engineers_array, interns_array) {
   var whoisit = await addAMember.addAMember();      // Second and continuing question to add member(s)
 
   await insert_into_array(whoisit, engineers_array, interns_array);
@@ -24,6 +25,7 @@ async function add_Members(engineers_array, interns_array) {
   if (whoisit == 'finish') {
     console.log(engineers_array);
     console.log(interns_array);
+    generate_html(manager_info, engineers_array, interns_array);
     return;
   }
 }
@@ -37,4 +39,4 @@ async function insert_into_array(whoisit, engineers_array, interns_array) {
   }
 }
 
-init();
+init(this.manager_info);
