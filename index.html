@@ -13,7 +13,7 @@
         <main>
           <div class="members" id="members">
             <section class="member_card">
-              <header>TMManager1<br>Manager</header>
+              <header>tmname1<br>Manager</header>
               <p>ID : 1</p>
               <p>E-Mail : 1</p>
               <p>Office Num : 1</p>
@@ -21,19 +21,28 @@
           </div>
         </main>
         <script type="text/javascript">
-          for (var i = 0; i < 1; i++){
+          var EngineerNameArray = ["e1","e2","e3","1"];
+          var EngineerIdArray = ["1","1","1","1"];
+          var EngineerEmailArray = ["1","1","1","1"];
+          var EngineerGithubArray = ["1","1","1","1"];
+          var InternNameArray = ["i1"];
+          var InternIdArray = ["1"];
+          var InternEmailArray = ["11"];
+          var InternGithubArray = ["1"];
+
+          for (var i = 0; i < 4; i++){
             var members = document.getElementById("members");
             console.log(members);
             var newSection = document.createElement("section");
             newSection.setAttribute('class', 'member_card');
             var header = document.createElement("header");
-            header.textContent = undefined
+            header.textContent = EngineerNameArray[i];
             var p = document.createElement("p");
             var p2 = document.createElement("p");
             var p3 = document.createElement("p");
-            p.textContent = undefined
-            p2.textContent = undefined
-            p3.textContent = undefined
+            p.textContent = EngineerIdArray[i];
+            p2.textContent = EngineerEmailArray[i];
+            p3.textContent = EngineerGithubArray[i];
             newSection.appendChild(header);
             newSection.appendChild(p);
             newSection.appendChild(p2);
@@ -46,13 +55,13 @@
             var newSection = document.createElement("section");
             newSection.setAttribute('class', 'member_card');
             var header = document.createElement("header");
-            header.textContent = undefined
+            header.textContent = InternNameArray[j];
             var p = document.createElement("p");
             var p2 = document.createElement("p");
             var p3 = document.createElement("p");
-            p.textContent = undefined
-            p2.textContent = undefined
-            p3.textContent = undefined
+            p.textContent = InternIdArray[j];
+            p2.textContent = InternEmailArray[j];
+            p3.textContent = InternSchoolArray[j];
             newSection.appendChild(header);
             newSection.appendChild(p);
             newSection.appendChild(p2);

@@ -26,7 +26,11 @@ async function add_Members(manager_info, engineers_array, interns_array) {
   if (whoisit == 'finish') {
     console.log(engineers_array);
     console.log(interns_array);
-    generate_html(manager_info, engineers_array, interns_array);
+    try {
+    await generate_html(manager_info, engineers_array, interns_array);
+    }catch(err){
+      console.log(err);
+    }
     return;
   }
 }

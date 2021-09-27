@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { json } = require('stream/consumers');
 
 async function generate_html(manager_info, engineers_array, interns_array) {
   // console.log(manager_info, engineers_array, interns_array);
@@ -35,15 +34,16 @@ async function generate_html(manager_info, engineers_array, interns_array) {
   var InternArray = [InternNameArray, InternIdArray, InternEmailArray, InternSchoolArray];
   
   var MembersArray = [EngineerArray, InternArray];
-  var myjson = JSON.stringify(MembersArray);
-  fs.writeFile("./txt/members_data.txt", myjson, function(err){
-    if(err) console.log(err);
-  });
-
-
-  // console.log(InternNameArray[0]);
-  // console.log(EngineerNameArray[0]);
-  // JSON.stringify(Intern);
+  EngineerNameArray = JSON.stringify(EngineerNameArray);
+  EngineerIdArray = JSON.stringify(EngineerIdArray);
+  EngineerEmailArray= JSON.stringify(EngineerEmailArray);
+  EngineerGithubArray= JSON.stringify(EngineerGithubArray);
+  InternNameArray= JSON.stringify(InternNameArray);
+  InternIdArray= JSON.stringify(InternIdArray);
+  InternEmailArray= JSON.stringify(InternEmailArray);
+  InternSchoolArray= JSON.stringify(InternSchoolArray);
+  
+  console.log(MembersArray);
   var data = `<!DOCTYPE html>
     <html>
       <head>
@@ -67,19 +67,28 @@ async function generate_html(manager_info, engineers_array, interns_array) {
           </div>
         </main>
         <script type="text/javascript">
+          var EngineerNameArray = ${EngineerNameArray};
+          var EngineerIdArray = ${EngineerIdArray};
+          var EngineerEmailArray = ${EngineerEmailArray};
+          var EngineerGithubArray = ${EngineerGithubArray};
+          var InternNameArray = ${InternNameArray};
+          var InternIdArray = ${InternIdArray};
+          var InternEmailArray = ${InternEmailArray};
+          var InternGithubArray = ${InternSchoolArray};
+
           for (var i = 0; i < ${engineers_array_length}; i++){
             var members = document.getElementById("members");
             console.log(members);
             var newSection = document.createElement("section");
             newSection.setAttribute('class', 'member_card');
             var header = document.createElement("header");
-            header.textContent = ${EngineerNameArray[i]};
+            header.textContent = EngineerNameArray[i];
             var p = document.createElement("p");
             var p2 = document.createElement("p");
             var p3 = document.createElement("p");
-            p.textContent = ${EngineerIdArray[i]};
-            p2.textContent = ${EngineerEmailArray[i]};
-            p3.textContent = ${EngineerGithubArray[i]};
+            p.textContent = EngineerIdArray[i];
+            p2.textContent = EngineerEmailArray[i];
+            p3.textContent = EngineerGithubArray[i];
             newSection.appendChild(header);
             newSection.appendChild(p);
             newSection.appendChild(p2);
@@ -92,13 +101,13 @@ async function generate_html(manager_info, engineers_array, interns_array) {
             var newSection = document.createElement("section");
             newSection.setAttribute('class', 'member_card');
             var header = document.createElement("header");
-            header.textContent = ${InternNameArray[j]};
+            header.textContent = InternNameArray[j];
             var p = document.createElement("p");
             var p2 = document.createElement("p");
             var p3 = document.createElement("p");
-            p.textContent = ${InternIdArray[j]};
-            p2.textContent = ${InternEmailArray[j]};
-            p3.textContent = ${InternSchoolArray[j]};
+            p.textContent = InternIdArray[j];
+            p2.textContent = InternEmailArray[j];
+            p3.textContent = InternSchoolArray[j];
             newSection.appendChild(header);
             newSection.appendChild(p);
             newSection.appendChild(p2);
