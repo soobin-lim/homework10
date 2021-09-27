@@ -24,7 +24,7 @@ async function callSecondFunction(choice) {
   if (choice == 'engineer') {
     return await engineer_info.questions_for_engineer();
   } else if (choice == 'intern') {
-    return await intern_info.questions_for_intern();
+    return await intern_info.intern_inquirer_prompt();
   } else if (choice == 'finish') {
     return;
   } else {

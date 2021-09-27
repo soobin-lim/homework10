@@ -34,4 +34,4 @@ async function intern_inquirer_prompt() {
   ).catch(e => console.log(e));
 };
 
-module.exports = { questions_for_intern: intern_inquirer_prompt };
+module.exports = { intern_inquirer_prompt };

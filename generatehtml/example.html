@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>My Team</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+      </head>
+      <body>
+        <header>
+          <h1>My Team</h1>
+        </header>
+        <main>
+          <div class="members" id="members">
+            <section class="member_card">
+              <header>testName<br>Manager</header>
+              <p>ID : 01-12</p>
+              <p>E-Mail : gmail@gmail.com</p>
+              <p>Office Num : 010-9120-1234</p>
+            </section>
+          </div>
+        </main>
+        <script type="text/javascript">
+          var members = document.getElementById("members");
+          console.log(members);
+          var newSection = document.createElement("section");
+          newSection.setAttribute('class', 'member_card');
+          var header = document.createElement("header");
+          var p = document.createElement("p");
+          newSection.appendChild(header);
+          newSection.appendChild(p);
+          members.appendChild(newSection);
+        </script>
+      </body>
+    </html>

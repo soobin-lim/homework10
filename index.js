@@ -12,8 +12,9 @@ async function init() {
 
 async function add_Members(manager_info, engineers_array, interns_array) {
   var whoisit = await addAMember.addAMember();      // Second and continuing question to add member(s)
-
-  await insert_into_array(whoisit, engineers_array, interns_array);
+  if (whoisit !== 'finish'){
+    await insert_into_array(whoisit, engineers_array, interns_array);
+  }
   while (whoisit !== 'finish') {
     whoisit = await addAMember.addAMember();
     if (whoisit == 'finish') {

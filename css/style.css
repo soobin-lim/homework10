@@ -79,6 +79,7 @@ footer {
 .member_card header {
   border-radius: 50px 50px 0px 0px;
   padding: 20px;
+  font-size: 200%;
 }
 
 .member_card p {

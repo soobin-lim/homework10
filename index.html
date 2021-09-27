@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>My Team</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+      </head>
+      <body>
+        <header>
+          <h1>My Team</h1>
+        </header>
+        <main>
+          <div class="members" id="members">
+            <section class="member_card">
+              <header>TMManager1<br>Manager</header>
+              <p>ID : 1</p>
+              <p>E-Mail : 1</p>
+              <p>Office Num : 1</p>
+            </section>
+          </div>
+        </main>
+        <script type="text/javascript">
+          for (var i = 0; i < 1; i++){
+            var members = document.getElementById("members");
+            console.log(members);
+            var newSection = document.createElement("section");
+            newSection.setAttribute('class', 'member_card');
+            var header = document.createElement("header");
+            header.textContent = undefined
+            var p = document.createElement("p");
+            var p2 = document.createElement("p");
+            var p3 = document.createElement("p");
+            p.textContent = undefined
+            p2.textContent = undefined
+            p3.textContent = undefined
+            newSection.appendChild(header);
+            newSection.appendChild(p);
+            newSection.appendChild(p2);
+            newSection.appendChild(p3);
+            members.appendChild(newSection);
+          }
+          for (var j = 0; j < 1; j++){
+            var members = document.getElementById("members");
+            console.log(members);
+            var newSection = document.createElement("section");
+            newSection.setAttribute('class', 'member_card');
+            var header = document.createElement("header");
+            header.textContent = undefined
+            var p = document.createElement("p");
+            var p2 = document.createElement("p");
+            var p3 = document.createElement("p");
+            p.textContent = undefined
+            p2.textContent = undefined
+            p3.textContent = undefined
+            newSection.appendChild(header);
+            newSection.appendChild(p);
+            newSection.appendChild(p2);
+            newSection.appendChild(p3);
+            members.appendChild(newSection);
+          }
+        </script>
+      </body>
+    </html>
