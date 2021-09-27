@@ -1,4 +1,4 @@
-employee = require('./Employee')
+const employee = require('./Employee')
 
 class Intern extends employee {
   constructor (name, id, email, school){
