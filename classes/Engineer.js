@@ -5,9 +5,10 @@ class Engineer extends employee {
     super(name, id, email);
     this.gh_username = gh_username;
   }
-  get getRole(){
+  getRole() {
     return 'Engineer';
   }
 }
 
 module.exports = Engineer;
+module.exports.getRole = Engineer.getRole;

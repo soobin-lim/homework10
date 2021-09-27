@@ -1,7 +1,6 @@
 //engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
 
 const inquirer = require("inquirer");
-const addAMember = require('../addAMember');
 const engineer = require('../classes/Engineer');
 
 async function questions_for_engineer() {

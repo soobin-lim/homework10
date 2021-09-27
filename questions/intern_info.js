@@ -2,7 +2,7 @@
 const inquirer = require("inquirer-promise");
 const intern = require('../classes/Intern');
 
-async function questions_for_intern() {
+async function intern_inquirer_prompt() {
   return await inquirer.prompt
   ([
     {
@@ -34,4 +34,4 @@ async function questions_for_intern() {
   ).catch(e => console.log(e));
 };
 
-module.exports = { questions_for_intern };
+module.exports = { questions_for_intern: intern_inquirer_prompt };

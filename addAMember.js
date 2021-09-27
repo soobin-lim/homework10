@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
-const questions_for_engineer = require('./questions/engineer_info');
-const questions_for_intern = require('./questions/intern_info');
+const engineer_info = require('./questions/engineer_info');
+const intern_info = require('./questions/intern_info');
 
 // engineer or an intern or to finish building my team
 async function addAMember() {
@@ -21,11 +21,10 @@ async function addAMember() {
 }
 
 async function callSecondFunction(choice) {
-  let response;
   if (choice == 'engineer') {
-    return await questions_for_engineer.questions_for_engineer();
+    return await engineer_info.questions_for_engineer();
   } else if (choice == 'intern') {
-    return await questions_for_intern.questions_for_intern();
+    return await intern_info.questions_for_intern();
   } else if (choice == 'finish') {
     return;
   } else {
