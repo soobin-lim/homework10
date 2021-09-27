@@ -1,0 +1,23 @@
+{
+  "name": "homework10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soobin-lim/homework10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soobin-lim/homework10/issues"
+  },
+  "homepage": "https://github.com/soobin-lim/homework10#readme",
+  "devDependencies": {
+    "jest": "^27.2.2"
+  }
+}

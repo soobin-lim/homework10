@@ -22,7 +22,7 @@ async function addAMember() {
 
 async function callSecondFunction(choice) {
   if (choice == 'engineer') {
-    return await engineer_info.questions_for_engineer();
+    return await engineer_info.engineer_inquirer_prompt();
   } else if (choice == 'intern') {
     return await intern_info.intern_inquirer_prompt();
   } else if (choice == 'finish') {
