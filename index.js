@@ -26,22 +26,15 @@ async function add_Members(engineers_array, interns_array) {
     console.log(interns_array);
     return;
   }
-
 }
 
 async function insert_into_array(whoisit, engineers_array, interns_array) {
   var whoisit = whoisit;
-  console.log('insert into array ', whoisit, engineers_array, interns_array);
-  console.log(whoisit.getRole());
   if (whoisit.getRole() == 'Intern') {
     interns_array.push(whoisit);
-    console.log(interns_array);
-  } else if (whoisit.getRole == 'Engineer') {
+  } else if (whoisit.getRole() == 'Engineer') {
     engineers_array.push(whoisit);
-    console.log(engineers_array);
   }
-
-
 }
 
 init();

@@ -1,9 +1,8 @@
 //engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-
 const inquirer = require("inquirer");
 const engineer = require('../classes/Engineer');
 
-async function questions_for_engineer() {
+async function engineer_inquirer_prompt() {
   return await inquirer.prompt
   ([
     {
@@ -34,4 +33,4 @@ async function questions_for_engineer() {
   ).catch(e => console.log(e));
 };
 
-module.exports = { questions_for_engineer };
+module.exports = { questions_for_engineer: engineer_inquirer_prompt };

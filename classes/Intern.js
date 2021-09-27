@@ -6,10 +6,10 @@ class Intern extends employee {
     this.school = school;
   }
 
-  static get getSchool() {
+  getSchool = function() {
     return this.school;
   }
-  
+
   getRole = function() {
     return 'Intern';
   }
@@ -17,3 +17,4 @@ class Intern extends employee {
 
 module.exports = Intern;
 module.exports.getRole = Intern.getRole;
+module.exports.getSchool = Intern.getSchool;
