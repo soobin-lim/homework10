@@ -14,7 +14,7 @@ body {
 header {
   padding: 40px;
   text-align: center;
-  background: #13293d;
+  background: #000000;
   color: #fff;
 }
 
@@ -24,7 +24,7 @@ nav {
 }
 
 nav a {
-  color: #13293d;
+  color: #000000;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -48,7 +48,7 @@ footer {
   bottom: 0;
   padding: 20px;
   text-align: center;
-  background: #13293d;
+  background: #000000;
   color: #fff;
   margin-top: auto;
 }
@@ -66,20 +66,19 @@ footer {
 /* Added rotation, box-shadow, border-radius */
 .member_card {
   border-style: solid;
-  border-width: 1px;
-  border-radius: 50px;
+  border-width: 3px;
+  border-radius: 0px;
   padding: 10px;
   flex: 0 0 300px;
-  transform: rotate(8deg);
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 10px 10px 5px #000000;
   margin: 20px;
 }
 
 /* Added border-radius to match the card */
 .member_card header {
-  border-radius: 50px 50px 0px 0px;
-  padding: 20px;
-  font-size: 200%;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+  font-size: 230%;
 }
 
 .member_card p {
