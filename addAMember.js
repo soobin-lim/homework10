@@ -1,8 +1,6 @@
 const inquirer = require("inquirer");
 const questions_for_engineer = require('./questions/engineer_info');
 const questions_for_intern = require('./questions/intern_info');
-const engineer = require('./classes/Engineer');
-const intern = require('./classes/Intern');
 
 // engineer or an intern or to finish building my team
 async function addAMember() {
@@ -16,8 +14,9 @@ async function addAMember() {
   ).then(async (val) => {
     if (val.choice == 'finish'){
       return 'finish';
+    } else {
+      return await callSecondFunction(val.choice);
     };
-    return await callSecondFunction(val.choice);
   });
 }
 

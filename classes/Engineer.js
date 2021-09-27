@@ -5,7 +5,7 @@ class Engineer extends employee {
     super(name, id, email);
     this.gh_username = gh_username;
   }
-  getRole = function(){
+  get getRole(){
     return 'Engineer';
   }
 }

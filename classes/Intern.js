@@ -6,11 +6,11 @@ class Intern extends employee {
     this.school = school;
   }
 
-  getSchool = function(){
+  static get getSchool() {
     return this.school;
   }
 
-  getRole = function(){
+  get getRole(){
     return 'Intern';
   }
 }

@@ -28,6 +28,7 @@ async function questions_for_intern() {
   ]).then(
     (val) => {
       my_intern = new intern(val.name, val.id, val.email, val.school);
+      
       return my_intern;
     }
   ).catch(e => console.log(e));
