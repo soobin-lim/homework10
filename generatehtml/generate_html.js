@@ -74,7 +74,7 @@ async function generate_html(manager_info, engineers_array, interns_array) {
           var InternNameArray = ${InternNameArray};
           var InternIdArray = ${InternIdArray};
           var InternEmailArray = ${InternEmailArray};
-          var InternGithubArray = ${InternSchoolArray};
+          var InternSchoolArray = ${InternSchoolArray};
 
           for (var i = 0; i < ${engineers_array_length}; i++){
             var members = document.getElementById("members");
