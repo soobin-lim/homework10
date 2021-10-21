@@ -19,5 +19,9 @@
   "homepage": "https://github.com/soobin-lim/homework10#readme",
   "devDependencies": {
     "jest": "^27.2.2"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "inquirer-promise": "^1.0.0"
   }
 }
